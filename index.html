@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Queen 💖</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:'Comic Sans MS', cursive;
+    background:linear-gradient(to bottom,#ffb3c6,#ffe5ec);
+    text-align:center;
+    overflow-x:hidden;
+    transition:1s;
+}
+
+/* Login */
+#login{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#ff8fab;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+input{
+    padding:12px;
+    border-radius:30px;
+    border:none;
+    width:80%;
+    max-width:300px;
+    font-size:18px;
+    text-align:center;
+}
+
+button{
+    padding:12px 25px;
+    margin-top:15px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d8d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{background:#e60073;}
+
+#content{
+    display:none;
+    padding:20px;
+    animation:fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+.section{
+    margin:20px 0;
+    padding:20px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.gallery img{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    font-size:20px;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+
+/* Click hearts */
+.click-heart{
+    position:fixed;
+    font-size:24px;
+    animation:pop 1s ease-out forwards;
+    pointer-events:none;
+}
+
+@keyframes pop{
+    0%{transform:scale(0);opacity:1;}
+    100%{transform:scale(2);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="login">
+    <h2>Enter Our Secret Code 💖</h2>
+    <input type="password" id="password" placeholder="Secret Code">
+    <button onclick="checkPassword()">Enter 👑</button>
+</div>
+
+<div id="content">
+
+<h1>To My Queen 👑💗</h1>
+
+<div class="section">
+    <h2>💌 My Message</h2>
+   حبيبتي ❤️
+
+من أول لحظة دخلتي فيها حياتي وأنا حاسس إن كل حاجة حواليا بقت أهدى وأجمل.
+وجودك في حياتي نعمة كبيرة،
+وضيّك مالي قلبي قبل عيني.
+
+ضحكتك بتطمني،
+وكلامك بيريّحني،
+ونظرة منك بتنسيني الدنيا كلها.
+
+أنا بحبك مش عشان حاجة،
+أنا بحبك لأنك إنتي.
+وهفضل أحبك كل يوم أكتر من اللي قبله 🤍
+
+أنا يمكن معرفش أعبّر دايمًا،
+بس قلبي بيعرفك كويس قوي.
+
+إنتي مش مجرد حبيبة،
+إنتي الأمان،
+والسند،
+والبيت اللي قلبي بيرتاح فيه.
+
+وعد مني:
+هفضل جنبك،
+وهحبك في كل حالاتك،
+وفي كل ظروفك،
+وفي كل أيامنا الجاية.
+
+بحبك حب مفيش كلام يوصفه 💞
+حبيبتي ❤️
+
+ممكن أكون مقصّر في الكلام،
+بس مش مقصّر في الحب.
+
+كل يوم بصحى وأنا مطمّن إن في إنسانة
+دعماي،
+وفاهمة قلبي،
+وحاسّة بيا من غير ما أتكلم.
+
+إنتي مش بس حبيبتي،
+إنتي دعوة حلوة اتحققت،
+وحلم كنت فاكر إنه بعيد.
+
+وأنا بوعدك:
+هفضل أحبك بصوت عالي وسكوت،
+في الفرح والتعب،
+وفي كل تفاصيل العمر.
+
+إنتي أغلى حاجة في حياتي 🤍
+ 💖💖💖بحبك ي امي بحبك يسندوستي بحبك يكل حياتي 
+
+    <p>
+        You are my heart, my happiness, my forever 💖  
+        Every second with you is a blessing ✨  
+        I love you endlessly 🌸
+    </p>
+    <div class="section">
+    <h2>💌 A Letter Just For You</h2>
+
+    <div class="love-letter">
+        My beautiful princess 💖,
+
+        From the very first moment you smiled at me,
+        something inside my heart changed forever.
+
+        Every laugh, every conversation,
+        every little moment with you
+        became my favorite memory.
+
+        I promise to stand by your side,
+        support your dreams,
+        protect your heart,
+        and love you in ways
+        words can’t even describe.
+
+        You are not just my girlfriend,
+        you are my safe place,
+        my peace,
+        my home.
+
+        Forever yours,
+        ❤️
+    </div>
+</div>
+
+</div>
+
+<div class="section">
+    <h2>⏳ Our Love Counter</h2>
+    <p id="counter"></p>
+</div>
+
+<div class="section">
+    <h2>📸 Our Memories</h2>
+    <div class="gallery">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <h2>🎵 Our Song</h2>
+    <audio controls autoplay loop style="width:100%;">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<button onclick="loveExplosion()">Touch My Heart 💕</button>
+
+</div>
+
+<script>
+
+// Password
+function checkPassword(){
+    var pass=document.getElementById("password").value;
+    if(pass==="542023"){ // غير الباسورد هنا
+        document.getElementById("login").style.display="none";
+        document.getElementById("content").style.display="block";
+
+        // Strong romantic vibration
+        if(navigator.vibrate){
+            navigator.vibrate([200,100,300,100,500]);
+        }
+    }else{
+        alert("Wrong Code 💔");
+    }
+}
+
+// Live Counter
+var startDate=new Date("2023-04-05"); // غير التاريخ
+function updateCounter(){
+    var now=new Date();
+    var diff=now-startDate;
+
+    var days=Math.floor(diff/(1000*60*60*24));
+    var hours=Math.floor((diff/(1000*60*60))%24);
+    var minutes=Math.floor((diff/(1000*60))%60);
+    var seconds=Math.floor((diff/1000)%60);
+
+    document.getElementById("counter").innerHTML=
+    days+" Days 💞 "+hours+" Hours 💗 "+
+    minutes+" Minutes 💕 "+seconds+" Seconds 💖";
+}
+setInterval(updateCounter,1000);
+
+// Auto floating hearts
+function autoHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="💗";
+    heart.style.left=Math.random()*100+"vw";
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove();},6000);
+}
+setInterval(autoHeart,800);
+
+// Click anywhere hearts + soft vibration
+document.addEventListener("click",function(e){
+    const heart=document.createElement("div");
+    heart.classList.add("click-heart");
+    heart.innerHTML="💖";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove();},1000);
+
+    if(navigator.vibrate){
+        navigator.vibrate(80);
+    }
+});
+
+// Heart Explosion Button
+function loveExplosion(){
+    for(let i=0;i<20;i++){
+        setTimeout(()=>{
+            const heart=document.createElement("div");
+            heart.classList.add("click-heart");
+            heart.innerHTML="💘";
+            heart.style.left=Math.random()*window.innerWidth+"px";
+            heart.style.top=Math.random()*window.innerHeight+"px";
+            document.body.appendChild(heart);
+            setTimeout(()=>{heart.remove();},1000);
+        },i*50);
+    }
+
+    if(navigator.vibrate){
+        navigator.vibrate([100,50,200,50,300]);
+    }
+}
+</script>
+
+</body>
+</html>
