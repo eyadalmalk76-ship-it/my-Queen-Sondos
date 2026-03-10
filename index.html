@@ -67,12 +67,13 @@ button:hover{background:#e60073;}
     padding:20px;
     background:white;
     border-radius:25px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    box-shadow:0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Timeline */
-.timeline{
-    position:relative;
+.timeline
+{
+    position:rela  tive;
     margin-top:30px;
     padding-right:20px;
 }
@@ -173,7 +174,7 @@ button:hover{background:#e60073;}
 <body>
 
 <div id="login">
-    <h2>Enter Our Secret Code 💖</h2>
+    <h2>The Sectret code is " your Phone Password " 💖</h2>
     <input type="password" id="password">
     <button onclick="checkPassword()">Enter 👑</button>
 </div>
@@ -181,6 +182,40 @@ button:hover{background:#e60073;}
 <div id="content">
 
 <h1>To My Queen Sondos 👑💗</h1>
+<div class="section">
+<h2>🎂 Birthday Message</h2>
+<p style="text-align:right;line-height:1.8;"></p>
+كل سنة وانتي طيبة يا أحلى وأغلى إنسانة في حياتي 🎂💖
+النهارده مش يوم عادي بالنسبة لي، النهارده اليوم اللي اتولدت فيه البنت اللي غيرت حياتي وخليتها أحلى بكتير. اليوم اللي ربنا رزق الدنيا فيه بإنسانة جميلة من جوا قبل ما تكون جميلة من برا… إنتي.
+
+بصراحة أنا مش عارف أعبّر بالكلام قد إيه وجودك في حياتي فرق معايا. من أول ما دخلتي حياتي وأنا حاسس إن الدنيا بقت أهدى وأجمل، وإن في حد بقى فاهمني وحاسس بيا حتى من غير ما أتكلم. وجودك بيديني طاقة وأمل، وبيخليني دايمًا عايز أبقى أحسن عشانك.
+
+ضحكتك بالنسبالي حاجة كبيرة… بتطمني وبتفرّح قلبي. كلامك معايا بيخليني أنسى أي تعب أو ضغط. وحتى في الأيام اللي الدنيا بتكون تقيلة فيها، مجرد إنك موجودة بيخليني أحس إن كل حاجة ممكن تبقى أحسن.
+
+يمكن أنا مش بعرف أعبّر دايمًا، وممكن أوقات أبقى مقصّر في الكلام، بس الحقيقة اللي جوا قلبي أكبر بكتير من أي كلام ممكن يتقال. أنا بحبك حب صادق وبسيط… حب جاي من قلبي ليكي إنتي، مش لأي سبب غير إنك إنتي.
+
+إنتي بالنسبة لي مش مجرد حبيبة…
+إنتي الأمان اللي برتاح فيه،
+والراحة اللي بلاقيها لما الدنيا تضغط عليّ،
+وإنتي الشخص اللي لما بفكر في المستقبل أتمنى يكون معايا فيه.
+
+في عيد ميلادك بتمنى من كل قلبي إن السنة الجديدة في حياتك تكون مليانة فرح وضحك ونجاح وكل حاجة نفسك فيها تتحقق. أتمنى ربنا يفرح قلبك دايمًا ويحققلك كل أحلامك ويخليكي دايمًا مبسوطة.
+
+وأنا من ناحيتي بوعدك بحاجة…
+بوعدك إني هفضل أحبك بصدق، وهفضل جنبك قد ما أقدر، وفي كل لحظة محتاجاني فيها هتلاقيني جنبك.
+هفرح لفرحك، وهقف جنبك في تعبك، وهفضل شايفك أجمل وأغلى إنسانة في حياتي.
+
+كل سنة وانتي نور في حياتي.
+كل سنة وانتي السبب في ضحكتي.
+كل سنة وانتي أقرب حد لقلبي.
+
+وكل سنة وأنا بحمد ربنا إنه كتبلي أعرفك وأحبك.
+عيد ميلاد سعيد يا أجمل هدية في حياتي 🎂💗
+
+<br><br>
+<p id="birthdayOutput" style="margin-top:20px;font-size:18px;color:#ff4d8d;"></p>
+
+</div>
 
 <div class="section">
 <h2>💌 رسالتي ليكي</h2>
@@ -292,6 +327,23 @@ button:hover{background:#e60073;}
 </div>
 
 <div class="section">
+    <div class="section">
+<h2>🎥 Our Videos for you 💕</h2>
+
+<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<source src="v1.mp4" type="video/mp4">
+</video>
+<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<source src="v2.mp4" type="video/mp4">
+</video>
+<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<source src="v3.mp4" type="video/mp4">
+</video>
+<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<source src="v4.mp4" type="video/mp4">
+</video>
+
+</div>
 <h2>🎵 Our Song</h2>
 <audio controls autoplay loop style="width:100%;">
 <source src="song.mp3" type="audio/mpeg">
@@ -307,7 +359,7 @@ button:hover{background:#e60073;}
 // Password
 function checkPassword(){
 var pass=document.getElementById("password").value;
-if(pass==="542023"){
+if(pass==="545619"){
 document.getElementById("login").style.display="none";
 document.getElementById("content").style.display="block";
 if(navigator.vibrate){navigator.vibrate([200,100,300]);}
