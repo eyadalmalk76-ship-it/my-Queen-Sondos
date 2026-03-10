@@ -330,18 +330,19 @@ button:hover{background:#e60073;}
     <div class="section">
 <h2>🎥 Our Videos for you 💕</h2>
 
-<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<video controls class="myVideo" style="width:100%;border-radius:20px;margin-bottom:15px;">
 <source src="v1.mp4" type="video/mp4">
 </video>
-<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<video controls  class="myVideo" style="width:100%;border-radius:20px;margin-bottom:15px;">
 <source src="v2.mp4" type="video/mp4">
 </video>
-<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<video controls class="myVideo" style="width:100%;border-radius:20px;margin-bottom:15px;">
 <source src="v3.mp4" type="video/mp4">
 </video>
-<video controls style="width:100%;border-radius:20px;margin-bottom:15px;">
+<video controls class="myVideo" style="width:100%;border-radius:20px;margin-bottom:15px;">
 <source src="v4.mp4" type="video/mp4">
 </video>
+
 
 </div>
 <h2>🎵 Our Song</h2>
@@ -432,6 +433,17 @@ entry.target.classList.add("show");
 
 document.querySelectorAll(".timeline-item").forEach(item=>{
 observer.observe(item);
+});
+const videos = document.querySelectorAll(".myVideo");
+
+videos.forEach(video => {
+    video.addEventListener("play", () => {
+        videos.forEach(v => {
+            if (v !== video) {
+                v.pause();
+            }
+        });
+    });
 });
 </script>
 
